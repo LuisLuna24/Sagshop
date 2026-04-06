@@ -3,6 +3,8 @@ import "../styles/global.css";
 
 import ToastProvider from '../components/ToastProvider';
 import toast from 'react-hot-toast'; 
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 ---
 
 <!doctype html>
@@ -16,8 +18,11 @@ import toast from 'react-hot-toast';
 		<title>Astro Basics</title>
 	</head>
 	<body>
+		<Navbar client:only="react" />
 		<slot />
 		<ToastProvider client:only="react" />
 		<toaster client:only="react" />
+
+		<Footer client:only="react" />
 	</body>
 </html>

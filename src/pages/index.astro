@@ -1,29 +1,14 @@
 ---
-import Welcome from "../components/Welcome.astro";
 import Layout from "../layouts/Layout.astro";
-
-// src/pages/index.astro
-import Saludador from "../components/Saludador.jsx";
-import SileoCard from "../components/SileoCard";
+import Hero from "../components/Hero.jsx";
+import Catalogo from "../components/Catalogo.jsx";
+import Nosotros from "../components/Nosotros.jsx";
+import Contacto from "../components/Contacto.jsx";
 ---
 
 <Layout>
-	<div class="flex flex-col items-center justify-center min-h-screen">
-		<h1>Mi sitio con Astro</h1>
-
-		<Saludador client:only="react" nombre="Luis" />
-		<SileoCard
-			client:only="react"
-			title="Astro Theme"
-			description="v1.0.4 • 2.5 MB"
-			icon="🚀"
-		/>
-
-		<SileoCard
-			client:only="react"
-			title="Tailwind Config"
-			description="v2.1.0 • 1.2 MB"
-			icon="🎨"
-		/>
-	</div>
+	<Hero client:only="react" />
+	<Catalogo client:only="react" />
+	<Nosotros client:only="react" />
+	<Contacto client:only="react" />
 </Layout>
